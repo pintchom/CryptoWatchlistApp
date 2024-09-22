@@ -18,7 +18,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             List {
-                ForEach(data, id: \.self) { coin in
+                ForEach(data, id: \.id) { coin in
                     HStack {
                         Text(coin.id)
                         Text("(\(coin.symbol))")
@@ -73,6 +73,7 @@ struct ContentView: View {
         .task {
             refresh()
         }
+        
     }
     func refresh() {
         print("REFRESHING")

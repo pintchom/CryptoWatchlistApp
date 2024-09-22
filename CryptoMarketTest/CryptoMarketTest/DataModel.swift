@@ -9,7 +9,7 @@ import SwiftData
 import Foundation
 
 @Model
-class DataModel: Codable {
+class DataModel: Codable, Identifiable {
     
     enum CodingKeys: CodingKey {
         case id
